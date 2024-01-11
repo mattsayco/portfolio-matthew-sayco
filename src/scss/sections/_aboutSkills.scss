@@ -21,8 +21,10 @@
         }
 
         #skills{
-            display: flex;
-            justify-content: center;
+            // display: flex;
+            // justify-content: center;
+            @include flex-center;
+            flex-direction: column;
             background-color: $color-bg-white;
             border-radius: 50px 50px 0 0;
             font-size: 1.5rem;
@@ -30,12 +32,15 @@
             .icon-provider {
                 stroke-width: 0;
             }
-            // & div {
-            //     &:first {
-            //         border-right: 1px solid black;
-            //     }
-            // }
-            
+            & h1 {
+                text-align: center;
+            }
+            #skills-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                // border-top: 1px solid black;
+            }
             .skills-main {
                 @include flex-center;
                 flex-direction: column;
