@@ -1,0 +1,94 @@
+@use "../abstract/index" as *;
+
+#about-me-skills{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-about-bg;
+    #about-parent {
+        margin-left: 15rem;
+        margin-right: 15rem;
+        #about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color-white;
+            font-size: 2rem;
+            p {
+                text-align: center;
+                font-size: 1.3rem;
+                line-height: 3rem;
+            }
+        }
+
+        #skills{
+            display: flex;
+            justify-content: center;
+            background-color: $color-bg-white;
+            border-radius: 50px 50px 0 0;
+            font-size: 1.5rem;
+
+            .icon-provider {
+                stroke-width: 0;
+            }
+            // & div {
+            //     &:first {
+            //         border-right: 1px solid black;
+            //     }
+            // }
+            
+            .skills-main {
+                @include flex-center;
+                flex-direction: column;
+                width: 100%;
+                &:first-child {
+                    border-right: 1px solid black;
+                }
+                .header-container {
+                    @include flex-center;
+                    width: 100%;
+
+                    .header-icon {
+                        @include flex-center;
+                        flex-direction: column;
+                        background-color: $color-bg-icon;
+                        border-radius: 50%;
+                        font-size: 3rem;
+                        height: 5rem;
+                        width: 5rem;
+                        margin-top: 3rem;
+                        
+                    }
+                }
+
+                h1 {
+                    @include flex-center;
+                    width: 100%;
+                }
+
+                .skill-container {
+                    @include flex-center;
+                    justify-content: space-evenly;
+                    width: 100%;
+
+                    .skill-icon-container{
+                        @include flex-center;
+                        flex-direction: column;
+                        padding: 1rem 3.5rem;
+                        span {
+                            @include flex-center;
+                            font-size: 2.5rem;
+                            
+                        }
+
+                        p {
+                            text-align: center;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
+}
