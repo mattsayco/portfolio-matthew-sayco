@@ -52,6 +52,8 @@ export default function AboutMeSkills() {
             challenges in the software development industry.
           </p>
         </section>
+      </section>
+      <section id="skill-parent">
         <section id="skills">
           {/* <h1>Tech Stack</h1> */}
           <div id="skills-container">
