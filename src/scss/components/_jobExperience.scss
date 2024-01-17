@@ -1,0 +1,25 @@
+@use "../abstract/index" as *;
+
+.company-job {
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    // padding: 0 $padding-sides;
+
+    h2 {
+        margin: 0 0 0.5rem 0;
+        font-weight: $font-light;
+        font-size: $font-size-sub-header;
+    }
+    
+    h3 {
+        margin: 0 0 0.5rem 0;
+        font-weight: $font-extra-light;
+        font-size: $font-size-sub-sub-header;
+    }
+
+    p {
+        margin: 0 0 1rem 0;
+        line-height: 2rem;
+    }
+}

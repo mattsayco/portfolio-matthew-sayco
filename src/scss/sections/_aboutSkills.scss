@@ -21,8 +21,8 @@
         }
     }
     #skill-parent {
-        margin-left: 15rem;
-        margin-right: 15rem;
+        margin-left : $padding-sides;
+        margin-right: $padding-sides;
         margin-top: -12rem;
         #skills{
             // display: flex;
@@ -30,7 +30,7 @@
             @include flex-center;
             flex-direction: column;
             background-color: $color-bg-white;
-            border-radius: 50px 50px 0 0;
+            border-radius: 50px;
             font-size: 1.5rem;
             box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
 
