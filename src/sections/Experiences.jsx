@@ -1,7 +1,7 @@
-import CompanyExperience from "../components/CompanyExperience";
+import CompanyExperience from "../components/Experience/CompanyExperience";
 import Company1 from "../../public/Encompass logo.png";
 import Company2 from "../../public/DSDLink logo.png";
-import CompaniesWorked from "../components/CompaniesWorked";
+import CompaniesWorked from "../components/Experience/CompaniesWorked";
 
 export default function Experiences() {
   const companyExperienceArr = [
