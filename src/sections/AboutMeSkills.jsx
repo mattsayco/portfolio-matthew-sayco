@@ -1,4 +1,3 @@
-import { IconContext } from "react-icons";
 import {
   FaCss3Alt,
   FaFigma,
@@ -17,6 +16,7 @@ import {
   SiMicrosoftsqlserver,
 } from "react-icons/si";
 import { RiReactjsFill } from "react-icons/ri";
+import Skills from "../components/Skills";
 
 export default function AboutMeSkills() {
   const frontendSkills = [
@@ -41,7 +41,7 @@ export default function AboutMeSkills() {
     <section id="about-me-skills">
       <section id="about-parent">
         <section id="about">
-          <h1>Hi, I’m Matthew, Nice to meet you</h1>
+          <h1>Hi, I’m Matthew. Nice to meet you</h1>
           <p>
             I am an experienced software developer and team leader with a proven
             track record of delivering timely updates and enhancements and
@@ -52,46 +52,23 @@ export default function AboutMeSkills() {
             challenges in the software development industry.
           </p>
         </section>
-        <IconContext.Provider value={{ className: "icon-provider" }}>
-          <section id="skills">
-            <div className="skills-main">
-              <div className="header-container">
-                <span className="header-icon">
-                  <FaDesktop />
-                </span>
-              </div>
-              <h1>Frontend</h1>
-              <div className="skill-container">
-                {frontendSkills.map(({ title, icon }) => {
-                  return (
-                    <div className="skill-icon-container" key={title}>
-                      <span>{icon}</span>
-                      <p>{title}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            <div className="skills-main">
-              <div className="header-container">
-                <span className="header-icon">
-                  <FaCode />
-                </span>
-              </div>
-              <h1>Backend</h1>
-              <div className="skill-container">
-                {backendSkills.map(({ title, icon }) => {
-                  return (
-                    <div className="skill-icon-container" key={title}>
-                      <span>{icon}</span>
-                      <p>{title}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-        </IconContext.Provider>
+      </section>
+      <section id="skill-parent">
+        <section id="skills">
+          {/* <h1>Tech Stack</h1> */}
+          <div id="skills-container">
+            <Skills
+              title="Frontend"
+              headerIcon={<FaDesktop />}
+              skillsArr={frontendSkills}
+            ></Skills>
+            <Skills
+              title="Backend"
+              headerIcon={<FaCode />}
+              skillsArr={backendSkills}
+            ></Skills>
+          </div>
+        </section>
       </section>
     </section>
   );
