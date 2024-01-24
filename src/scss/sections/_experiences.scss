@@ -35,22 +35,22 @@
             font-weight: $font-bold;
         }
     }
-    .worked-with {
-        @include flex-center;
-        background-color: $color-bg-experience;
-        color: $color-white;
-        border-top: 1px solid $color-white;
-        flex-direction: column;
-        padding: 0 $padding-sides;
-        .previous-company {
-            @include flex-center;
-            justify-content: space-evenly;
-            width: 100%;
-            img {
-                width: unset;
-                height: 71px;
-            }
-        }
+    // .worked-with {
+    //     @include flex-center;
+    //     background-color: $color-bg-experience;
+    //     color: $color-white;
+    //     border-top: 1px solid $color-white;
+    //     flex-direction: column;
+    //     padding: 0 $padding-sides;
+    //     .previous-company {
+    //         @include flex-center;
+    //         justify-content: space-evenly;
+    //         width: 100%;
+    //         img {
+    //             width: unset;
+    //             height: 71px;
+    //         }
+    //     }
         
-    }
+    // }
 }

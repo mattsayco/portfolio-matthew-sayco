@@ -1,0 +1,30 @@
+@use "../abstract/index" as *;
+
+footer {
+    @include flex-center;
+    text-align: center;
+    background-color: $color-navbar;
+    color: $color-white;
+    flex-direction: column;
+
+    .footer-container {
+        @include flex-center;
+        width: 100%;
+
+        .footer-icon {
+            @include flex-center;
+            flex-direction: column;
+            // background-color: $color-bg-icon;
+            // border-radius: 50%;
+            font-size: 3rem;
+            height: auto;
+            width: 5rem;
+        }
+    }
+
+    h2 {
+        margin: 0.5rem 0 0.5rem 0;
+        font-weight: $font-light;
+        font-size: $font-size-sub-header;
+    }
+}
