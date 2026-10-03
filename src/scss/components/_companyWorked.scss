@@ -18,3 +18,28 @@
     }
     
 }
+
+@include breakpoint(tablet) {
+    .worked-with {
+        padding: 0 2rem 2rem 2rem;
+
+        .previous-company img {
+            height: 50px;
+        }
+    }
+}
+
+@include breakpoint(mobile) {
+    .worked-with {
+        padding: 0 1rem 1.5rem 1rem;
+
+        h1 {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .previous-company img {
+            height: 38px;
+        }
+    }
+}

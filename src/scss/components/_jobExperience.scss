@@ -23,3 +23,19 @@
         line-height: 2rem;
     }
 }
+
+@include breakpoint(tablet) {
+    .company-job {
+        padding: 0 2.5rem;
+
+        p {
+            line-height: 1.7rem;
+        }
+    }
+}
+
+@include breakpoint(mobile) {
+    .company-job {
+        padding: 0 1.25rem;
+    }
+}

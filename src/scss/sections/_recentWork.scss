@@ -2,7 +2,7 @@
 
 #recent-work {
     @include flex-center;
-    padding-top: 2.5rem;
+    padding: 2.5rem $padding-sides;
     flex-direction: column;
     #recent-work-header {
         text-align: center;
@@ -15,5 +15,17 @@
     }
     #project-list {
         @include flex-center;
+    }
+}
+
+@include breakpoint(tablet) {
+    #recent-work {
+        padding: 2rem 2rem;
+    }
+}
+
+@include breakpoint(mobile) {
+    #recent-work {
+        padding: 1.5rem 1rem;
     }
 }

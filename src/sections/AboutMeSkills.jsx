@@ -1,6 +1,5 @@
 import {
   FaCss3Alt,
-  FaFigma,
   FaHtml5,
   FaNodeJs,
   FaSass,
@@ -11,27 +10,28 @@ import {
 import {
   SiMysql,
   SiFirebase,
-  SiExpress,
   SiDotnet,
   SiMicrosoftsqlserver,
+  SiMicrosoftazure,
 } from "react-icons/si";
-import { RiReactjsFill } from "react-icons/ri";
+import { RiAngularjsFill, RiReactjsFill } from "react-icons/ri";
 import Skills from "../components/Skills";
 
-export default function AboutMeSkills() {
+// eslint-disable-next-line react/prop-types
+export default function AboutMeSkills({ aboutRef, techStackRef }) {
   const frontendSkills = [
     { title: "HTML", icon: <FaHtml5 /> },
     { title: "CSS", icon: <FaCss3Alt /> },
-    { title: "Figma", icon: <FaFigma /> },
     { title: "Sass", icon: <FaSass /> },
     { title: "Bootstrap", icon: <FaBootstrap /> },
     { title: "ReactJS", icon: <RiReactjsFill /> },
+    { title: "Angular", icon: <RiAngularjsFill /> },
   ];
 
   const backendSkills = [
-    { title: "ExpressJS", icon: <SiExpress /> },
     { title: "NodeJS", icon: <FaNodeJs /> },
     { title: "ASP.Net", icon: <SiDotnet /> },
+    { title: "Azure", icon: <SiMicrosoftazure /> },
     { title: "Firebase", icon: <SiFirebase /> },
     { title: "MySQL", icon: <SiMysql /> },
     { title: "MSSQL", icon: <SiMicrosoftsqlserver /> },
@@ -39,10 +39,10 @@ export default function AboutMeSkills() {
 
   return (
     <section id="about-me-skills">
-      <section id="about-parent">
+      <section id="about-parent" ref={aboutRef}>
         <section id="about">
           <h1>Hi, I’m Matthew. Nice to meet you</h1>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="400">
             I am an experienced software developer and team leader with a proven
             track record of delivering timely updates and enhancements and
             improving software performance. Skilled in devising and executing
@@ -53,7 +53,7 @@ export default function AboutMeSkills() {
           </p>
         </section>
       </section>
-      <section id="skill-parent">
+      <section id="skill-parent" ref={techStackRef}>
         <section id="skills">
           {/* <h1>Tech Stack</h1> */}
           <div id="skills-container">

@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import { FaLinkedinIn, FaSquareGithub, FaEnvelope } from "react-icons/fa6";
 
-export default function Footer() {
+export default function Footer({ contactRef }) {
+  const currentYear = new Date().getFullYear();
   const footerIconsArr = [
     { title: "LinkedIn", icon: <FaLinkedinIn />, link: "" },
     { title: "Github", icon: <FaSquareGithub />, link: "" },
@@ -12,7 +14,7 @@ export default function Footer() {
   ];
   return (
     <>
-      <footer id="footer">
+      <footer id="footer" ref={contactRef}>
         <h1>Get in Touch</h1>
         <div className="footer-container">
           {footerIconsArr.map(({ title, icon, link }) => {
@@ -23,9 +25,9 @@ export default function Footer() {
             );
           })}
         </div>
-        <diiv className="footer-copyright">
-          <h2>© 2024 Matthew Paul Sayco</h2>
-        </diiv>
+        <div className="footer-copyright">
+          <h2>© {currentYear} Matthew Paul Sayco</h2>
+        </div>
       </footer>
     </>
   );

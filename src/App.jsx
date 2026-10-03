@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useRef } from "react";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import NavBar from "./components/NavBar";
@@ -9,17 +9,54 @@ import Experiences from "./sections/Experiences";
 import RecentWork from "./sections/RecentWork";
 import Footer from "./components/Footer";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: "aos-init", // class applied after initialization
+  animatedClassName: "aos-animate", // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 700, // values from 0 to 3000, with step 50ms
+  easing: "ease", // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: true, // whether elements should animate out while scrolling past them
+  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+});
+
 function App() {
-  // const [count, setCount] = useState(0)
+  const aboutRef = useRef(null);
+  const techStackRef = useRef(null);
+  const workExpRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar
+        aboutRef={aboutRef}
+        techStackRef={techStackRef}
+        workExpRef={workExpRef}
+        portfolioRef={portfolioRef}
+        contactRef={contactRef}
+      ></NavBar>
       <Landing></Landing>
-      <AboutMeSkills></AboutMeSkills>
-      <Experiences></Experiences>
-      <RecentWork></RecentWork>
-      <Footer></Footer>
+      <AboutMeSkills
+        aboutRef={aboutRef}
+        techStackRef={techStackRef}
+      ></AboutMeSkills>
+      <Experiences workExpRef={workExpRef}></Experiences>
+      <RecentWork portfolioRef={portfolioRef}></RecentWork>
+      <Footer contactRef={contactRef}></Footer>
     </>
   );
 }

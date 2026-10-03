@@ -3,8 +3,19 @@ import Company1 from "../../public/Encompass logo.png";
 import Company2 from "../../public/DSDLink logo.png";
 import CompaniesWorked from "../components/Experience/CompaniesWorked";
 
-export default function Experiences() {
+// eslint-disable-next-line react/prop-types
+export default function Experiences({ workExpRef }) {
   const companyExperienceArr = [
+    {
+      company: "Outsourced Quality Assured Services, Inc.",
+      jobExperienceArr: [
+        {
+          title: "Software Application Developer",
+          description:
+            "Successfully developed and deployed nine custom web portals using Azure, ASP.NET, and Angular, tailored to meet unique client requirements. Key projects include a WinWeigh portal for vehicle weight compliance and Power BI integration for enhanced data visualization. These solutions improved operational efficiency, regulatory compliance, and data-driven decision-making for clients.",
+        },
+      ],
+    },
     {
       company: "Giant International Software Station Inc",
       jobExperienceArr: [
@@ -41,7 +52,7 @@ export default function Experiences() {
 
   return (
     <>
-      <section id="experience">
+      <section id="experience" ref={workExpRef}>
         <h1>Experiences</h1>
         {companyExperienceArr.map(({ company, jobExperienceArr }, index) => {
           return (
