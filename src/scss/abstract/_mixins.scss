@@ -4,3 +4,19 @@
     flex-wrap: wrap;
     align-content: center;
 }
+
+@mixin breakpoint($size) {
+    @if $size == tablet {
+        @media (max-width: 900px) {
+            @content;
+        }
+    } @else if $size == mobile {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $size == small {
+        @media (max-width: 380px) {
+            @content;
+        }
+    }
+}

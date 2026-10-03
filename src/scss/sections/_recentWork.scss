@@ -1,0 +1,31 @@
+@use "../abstract/index" as *;
+
+#recent-work {
+    @include flex-center;
+    padding: 2.5rem $padding-sides;
+    flex-direction: column;
+    #recent-work-header {
+        text-align: center;
+
+        h2 {
+            margin: 0 0 0.5rem 0;
+            font-weight: $font-light;
+            font-size: $font-size-sub-header;
+        }
+    }
+    #project-list {
+        @include flex-center;
+    }
+}
+
+@include breakpoint(tablet) {
+    #recent-work {
+        padding: 2rem 2rem;
+    }
+}
+
+@include breakpoint(mobile) {
+    #recent-work {
+        padding: 1.5rem 1rem;
+    }
+}

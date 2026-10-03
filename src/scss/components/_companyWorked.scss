@@ -1,0 +1,45 @@
+@use "../abstract/index" as *;
+
+.worked-with {
+    @include flex-center;
+    background-color: $color-bg-experience;
+    color: $color-white;
+    border-top: 1px solid $color-white;
+    flex-direction: column;
+    padding: 0 $padding-sides 2.5rem $padding-sides;
+    .previous-company {
+        @include flex-center;
+        justify-content: space-evenly;
+        width: 100%;
+        img {
+            width: unset;
+            height: 71px;
+        }
+    }
+    
+}
+
+@include breakpoint(tablet) {
+    .worked-with {
+        padding: 0 2rem 2rem 2rem;
+
+        .previous-company img {
+            height: 50px;
+        }
+    }
+}
+
+@include breakpoint(mobile) {
+    .worked-with {
+        padding: 0 1rem 1.5rem 1rem;
+
+        h1 {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .previous-company img {
+            height: 38px;
+        }
+    }
+}
